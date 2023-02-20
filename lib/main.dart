@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Ticket Booking App',
       theme: ThemeData(
         primaryColor: primary,
       ),
@@ -21,4 +21,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-// VIdeo time, 4:18:43
+// TODO: VIdeo time, 5:25:00
