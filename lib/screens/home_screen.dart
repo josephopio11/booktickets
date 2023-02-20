@@ -1,6 +1,7 @@
 import 'package:booktickets/screens/hotel_screen.dart';
 import 'package:booktickets/screens/ticket_view.dart';
 import 'package:booktickets/utils/app_info_list.dart';
+import 'package:booktickets/utils/app_layout.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -39,8 +40,8 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      height: 50,
-                      width: 50,
+                      height: AppLayout.getHeight(50),
+                      width: AppLayout.getWidth(50),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         image: const DecorationImage(
@@ -53,14 +54,15 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Gap(25),
+                Gap(AppLayout.getHeight(25)),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: const Color(0xFFf4f6fd),
                   ),
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: AppLayout.getHeight(12),
+                      vertical: AppLayout.getHeight(12)),
                   child: Row(
                     children: [
                       const Icon(
@@ -94,12 +96,9 @@ class HomeScreen extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 20),
             child: Row(
-              children: const [
-                TicketView(),
-                TicketView(),
-                TicketView(),
-                TicketView(),
-              ],
+              children: ticketList
+                  .map((singleTicket) => TicketView(ticket: singleTicket))
+                  .toList(),
             ),
           ),
           const Gap(15),

@@ -16,7 +16,9 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   fluentui_icons: ^1.0.0
-  gap: any
+  gap: ^2.0.1
+  get: any
+  
 
 dev_dependencies:
   flutter_test:
