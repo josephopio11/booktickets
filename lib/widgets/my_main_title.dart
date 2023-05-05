@@ -15,7 +15,7 @@ class MyMainTitle extends StatelessWidget {
         Text(title, style: Styles.headLineStyle2),
         InkWell(
           onTap: () {
-            print("Youve been tapped ${title}");
+            // print("Youve been tapped ${title}");
           },
           child: Text(
             actionText,
